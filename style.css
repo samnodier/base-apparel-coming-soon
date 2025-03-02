@@ -104,9 +104,9 @@ input {
     animation-duration: 0.4s;
 }
 
-input:focus {
+/* input:focus {
     border: solid 2px var(--desaturated-red);
-}
+} */
 
 .error {
     border-color: var(--soft-red);
@@ -131,7 +131,7 @@ button:hover {
 }
 
 .hero-cover {
-    width: 100%;
+    width: 70%;
     height: 100%;
     background-image: url("images/hero-desktop.jpg");
     background-size: cover;
@@ -141,7 +141,6 @@ button:hover {
 .mobile-image {
     display: none;
 }
-
 
 @media screen and (max-width: 768px) {
     nav {
@@ -188,5 +187,11 @@ button:hover {
 
     .hero-content h1 {
         font-size: 2.5rem;
+        line-height: 3rem;
+        margin: 1rem 0;
+    }
+
+    .form {
+        padding: 1rem 0;
     }
 }
