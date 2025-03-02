@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-graying-red: hsl(0, 6%, 24%);
+    --gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,15 +16,177 @@ body {
     margin: 0 auto;
     width: 100%;
     height: 100vh;
-    font-family: 
+}
+
+.hidden {
+    display: none;
+}
+
+nav {
+    position: absolute;
+    padding: 5rem 7rem;
 }
 
 .hero {
-    display:flex;
+    display: flex;
     height: inherit;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .hero-content {
     padding: 5rem 7rem;
     width: 60%;
+}
+
+.hero-content h1 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 10px;
+    line-height: 4rem;
+    color: var(--dark-graying-red);
+    padding-top: 5rem;
+}
+
+.hero-content h1 span {
+    font-weight: 300;
+    color: var(--desaturated-red);
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 2rem;
+    font-weight: 600;
+    color: var(--desaturated-red);
+}
+
+.hero-content .form {
+    padding: 2rem 0;
+}
+
+form {
+    position: relative;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container p {
+    font-size: 15px;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.error-icon {
+    position: absolute;
+    top: 11px;
+    right: 80px;
+}
+
+#error-message {
+    color: var(--soft-red);
+}
+
+input {
+    padding-left: 20px;
+    padding-top: 16px;
+    padding-bottom: 13px;
+    padding-right: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    border: solid 2px var(--desaturated-red);
+    border-radius: 25px;
+    color: var(--desaturated-red);
+    width: 100%;
+    outline: none;
+    -webkit-animation-duration: 0.4s;
+    /* Safari */
+    animation-duration: 0.4s;
+}
+
+input:focus {
+    border: solid 2px var(--desaturated-red);
+}
+
+.error {
+    border-color: var(--soft-red);
+}
+
+button {
+    padding: 13px 30px;
+    border: none;
+    background: var(--gradient-2);
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    box-shadow: -2px 6px 15px 5px var(--desaturated-red);
+}
+
+.hero-cover {
+    width: 100%;
+    height: 100%;
+    background-image: url("images/hero-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mobile-image {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: relative;
+        padding: 1rem 2rem;
+        height: auto;
+    }
+
+    .mobile-image {
+        display: block;
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 1rem 4rem;
+    }
+
+    .hero-content h1 {
+        padding-top: 0;
+    }
+
+    .hero-cover {
+        background: none;
+        width: 100%;
+ 
+    }
+
+    .form {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .hero-content {
+        padding: 1rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 }

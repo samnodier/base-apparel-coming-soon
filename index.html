@@ -16,28 +16,36 @@
 </head>
 
 <body>
-<div class="hero">
-  <div class="hero-content">
-    <div>
-      <!-- Logo -->
-      <img src="images/logo.svg" alt="Base Apparel">
+  <nav>
+    <!-- Logo -->
+    <img src="images/logo.svg" alt="Base Apparel">
+  </nav>
+  <div class="hero">
+    <div class="hero-content">
+      <div>
+        <h1><span>We're</span><br>coming<br>soon</h1>
+
+        <p>Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      </div>
+      <div class="form">
+        <form action="post" novalidate>
+          <div class="input-container">
+          <input type="email" name="email" id="email" placeholder="Email Address" class="error">
+          <p class="hidden" id="error-message">Please provide a valid email</p>
+          <img src="images/icon-error.svg" alt="Invalid Email" class="error-icon hidden" id="error-icon">
+        </div>
+          <button aria-label="Submit"><img src="images/icon-arrow.svg" alt="Submit"></button>
+        </form>
+      </div>
     </div>
 
-    <div>
-      <h1>We're coming soon</h1>
-
-      <p>Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-
-        <input type="email" name="email" id="email" placeholder="Email Address">
+    <div class="hero-cover">
+      <!-- Mobile Image -->
+      <img class="mobile-image" src="images/hero-mobile.jpg">
     </div>
   </div>
-
-  <div class="hero-cover">
-    <img src="images/hero-desktop.jpg" alt="Hero Desktop">
-
-  </div>
-</div>
   <script src="script.js"></script>
 </body>
 
